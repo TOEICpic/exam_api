@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="containers">
+    <div class="header form-input">
+      Employee Management System
+    </div>
+  </div>
+  <div class="flex form-input">
+    <div class="header-form">ชื่อ-นามสกุล</div>
+    <input class="form" name="Name" type="text" >
+  </div>
+
+  <div class="flex form-input">
+    <div class="header-form">ที่อยู่ของที่ติดต่อได้</div>
+    <input class="form" name="Address" type="text" >
+  </div>
+
+  <div class="flex form-input">
+    <div class="header-form">เบอร์โทรศัทพ์</div>
+    <input class="form" name="Tel" type="text" min="0" maxlength="10">
+  </div>
+
+  <div class="flex form-input">
+    <div class="header-form">ตำแหน่ง</div>
+    <input class="form" name="JobPosition" type="text" >
+  </div>
+
+  <div class="flex form-input">
+    <div class="header-form">เวลาเข้างาน</div>
+    <div class="form" id="EnterWork"></div>
+  </div>
+
+  <div class="flex form-input">
+    <div class="header-form">เวลาออกงาน</div>
+    <div class="form" id="LeaveWork" ></div>
+  </div>
+
+  <div class="flex form-input">
+    <div class="header-form">จำนวนชั่วโมงในการทำงาน</div>
+    <input class="form" name="Quantity" type="number" min="0" max="8">
+  </div>
+
+  <div class="flex form-input">
+    <div class="header-form">รายละเอียดในการทำงาน</div>
+    <input class="form" name="JobDescription" type="text">
+  </div>
+
+  <div class="flex LeaveType form-input">
+    <div class="header-form">ประเภทการลา</div>
+    <div class="flex">
+      <div>
+        <input name="LeaveType" type="radio" value="ลากิจ">ลากิจ
+      </div>
+      <div>
+        <input name="LeaveType" type="radio" value="ลาป่วย">ลาป่วย
+      </div>
+      <div>
+        อื่นๆ <input name="LeaveType" type="text" >
+      </div>
+    </div>
+  <div class="flex form-input">
+  <div class="header-form">วันที่ </div><div class="form" id="LeaveDate" ></div>
+  </div>
+
+  <div class="form-input">
+    เหตุผล
+    <div>
+      <textarea name="description"></textarea>
+    </div>
+  </div>
+  </div>
+  <div id="message" class="message"></div>
+  <div class="center">
+    <button onclick="submitData()" class="button">บันทึกข้อมูล</button>
+</div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
